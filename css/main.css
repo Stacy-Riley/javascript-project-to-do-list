@@ -20,11 +20,15 @@ html {
   padding: 0;
 }
 
-body, html {
-  height: 100%;
-  width: 100%;
+body {
+  min-width: 250px;
   margin: 0;
-  padding: 0;
+}
+
+/* Includes the padding and border
+ in an element's total width and height */
+* {
+  box-sizing: border-box;
 }
 /*
  * Remove text-shadow in selection highlight:
@@ -99,24 +103,36 @@ textarea {
 /** Mobil Optimized First **/
 /************************************/
 
-.tasker {
-  margin: 0 auto;
-  background-color: pink;
-  border: 2px solid black;
-  text-align: center;
-  padding: 20px 0 20px 0;
-  max-width: 400px;
-}
-
-.error {
-  text-align: center;
-  font-weight: bold;
-  padding-right: 50px;
-}
-
 ul {
   margin: 0;
   padding: 0;
+}
+
+/*style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 1.125em;
+  transition: 0.2s;
+
+  /*makes the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*creates an alternating color stripe affect of list items */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/*creates a darker background-color on hover */
+ul li:hover {
+  background: #ddd;
 }
 
 ul li.checked {
@@ -124,11 +140,11 @@ ul li.checked {
   background: #888;
   color: #fff;
 }
-
+/* Adds a checkmark when list item is clicked on*/
 ul li.checked::before {
   content: '';
   position: absolute;
-  border-color: green;
+  border-color: #fff;
   border-style: solid;
   border-width: 0 2px 2px 0;
   top: 10px;
@@ -136,8 +152,87 @@ ul li.checked::before {
   transform: rotate(45deg);
   height: 15px;
   width: 7px;
-
 }
+
+/*creates style for the delete "x" */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 2em;
+  padding-top: 0;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/*main box with heading and input box */
+.tasker {
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/*
+/* clear floats after the header box
+.tasker:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+*/
+h2 {
+  text-align: center;
+  margin: 5px;
+}
+
+/*Centering parent div so elements inside will
+be centered */
+#input-section {
+  text-align: center;
+}
+
+/* style the input section*/
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  /*float: left;*/
+  /*added to center element*/
+  display: inline-block;
+  font-size: 1em;
+}
+
+/*styles for button*/
+span i{
+  font-size: 1.90em;
+  padding: 5px 10px 5px 10px;
+  /*float: left;*/
+  /*added to center element*/
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  background: #d9d9d9;
+  transition: 0.3s;
+  margin: 0;
+  border: 0;
+  vertical-align: middle;
+
+
+  
+}
+
+span i:hover {
+  background-color: #bbb;
+}
+
+
 /*******************************************************/
 /** Navbar Section **/
 /*******************************************************/

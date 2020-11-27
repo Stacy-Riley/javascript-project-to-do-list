@@ -25,18 +25,17 @@
 
 <body>
   <div id="tasker" class="tasker"> <!-- Beginning of wrapper-->
-    <div id="error" class="error"></div>
-    <div id="tasker-header" class="tasker-header">
-      <input type="text" id="input-task" > <!-- placeholder="Enter a task" -->
-      <button id="add-task-btn">
-        <i class="fas fa-plus-square"></i>
-      </button> 
+    <h2>My To Do List</h2>
+    <div id="input-section">
+      <input type="text" id="input-task" placeholder="Enter a task">
+        <span id="add-task-btn" onclick="newElement()">
+          <i class="fas fa-plus-square"></i>
+        </span> 
     </div>
-    <div class="tasker-body">
-      <ul id="tasks"></ul>  
-    </div>
-  </div> <!-- End of wrapper -->
-
+  </div>
+    
+    <ul id="myUL">
+    </ul>  
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
