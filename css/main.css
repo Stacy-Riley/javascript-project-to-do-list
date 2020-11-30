@@ -18,11 +18,12 @@ html {
   border: 0;
   margin: 0;
   padding: 0;
+  background-color: #f5f8fb;
 }
 
 body {
-  min-width: 250px;
-  margin: 0;
+  margin: auto;
+  width: 100%;
 }
 
 /* Includes the padding and border
@@ -117,6 +118,9 @@ ul li {
   background: #eee;
   font-size: 1.125em;
   transition: 0.2s;
+  border-left: .5px solid #618fc3;
+  border-right: .5px solid #618fc3;
+  border-bottom: .5px solid #618fc3;
 
   /*makes the list items unselectable */
   -webkit-user-select: none;
@@ -161,6 +165,7 @@ ul li.checked::before {
   top: 0;
   font-size: 2em;
   padding-top: 0;
+  padding: 0 15px 0 15px;
 }
 
 .close:hover {
@@ -170,20 +175,12 @@ ul li.checked::before {
 
 /*main box with heading and input box */
 .tasker {
-  background-color: #f44336;
+  background-color: #86a9d1;
   padding: 30px 40px;
   color: white;
   text-align: center;
 }
 
-/*
-/* clear floats after the header box
-.tasker:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-*/
 h2 {
   text-align: center;
   margin: 5px;
@@ -200,10 +197,9 @@ input {
   margin: 0;
   border: none;
   border-radius: 0;
-  width: 75%;
+  width: 70%;
   padding: 10px;
-  /*float: left;*/
-  /*added to center element*/
+  background-color: #f5f8fb;
   display: inline-block;
   font-size: 1em;
 }
@@ -211,111 +207,47 @@ input {
 /*styles for button*/
 span i{
   font-size: 1.90em;
-  padding: 5px 10px 5px 10px;
-  /*float: left;*/
-  /*added to center element*/
+  padding: 5px 15px 5px 15px;
   display: inline-block;
   border: none;
   cursor: pointer;
   color: #555;
   background: #d9d9d9;
   transition: 0.3s;
-  margin: 0;
+  margin-left: 5px;
   border: 0;
   vertical-align: middle;
-
-
-  
 }
 
 span i:hover {
   background-color: #bbb;
 }
 
-
-/*******************************************************/
-/** Navbar Section **/
-/*******************************************************/
-
-/*******************************************************/
-/**Home Page**/
-/*******************************************************/
-
-/*******************************************************/
-/** About Page **/
-/*******************************************************/
-
-/*******************************************************/
-/** Portfolio Page **/
-/*******************************************************/
-
-/*******************************************************/
-/** Contact Page **/
-/*******************************************************/
-
 /* =====================================================
     **** Tablet Styles ****
    =====================================================*/
 @media(min-width: 768px){
   /*******************************************************/
-  /**** Navbar styles Tablet ****/ 
-  /*******************************************************/
-  /*******************************************************/
   /**** General Heading Styles - Tablet ****/
   /*******************************************************/
-  /*******************************************************/
-  /**** Home Page Styles - Tablet ****/
-  /*******************************************************/
-  /*******************************************************/
-  /**** About Page Styles - Tablet ****/
-  /*******************************************************/
-  /*******************************************************/
-  /**** Portfolio Page Styles - Tablet ****/
-  /*******************************************************/
-  /*******************************************************/
-  /**** Contact Page Styles - Tablet ****/
-  /*******************************************************/
- }
+  body {
+  /*min-width: 250px; */
+  margin: auto;
+  width: 80%;
+  }
 
+/* style the input section*/
+  input {
+    width: 75%;
+    padding: 10px;
+    font-size: 1em;
+  }
 
-  /* =====================================================
-    **** Additional Tablet Styles- Ipad-Pro Size****
-   =====================================================*/
-@media(min-width: 1000px){
+/*styles for button*/
+  span i{
+    margin-left: 10px;
+  }
 }
-
-/* =====================================================
-   **** Desktop Styles **** 
-   =====================================================*/
-@media(min-width: 1200px){
-  /*******************************************************/
-  /**** Home Page Styles - Desktop ****/
-  /*******************************************************/
-  /*******************************************************/
-  /**** General Heading Styles - Desktop ****/
-  /*******************************************************/
-  /*******************************************************/
-  /**** Home Page Styles - Desktop ****/
-  /*******************************************************/
-  /*******************************************************/
-  /**** About Page Styles - Desktop ****/
-  /*******************************************************/
-  /*******************************************************/
-  /**** Portfolio Page Styles - Desktop ****/
-  /*******************************************************/
-  /*******************************************************/
-  /**** Contact Page Styles - Desktop ****/
-  /*******************************************************/
- }
-
-
-
-
-
-
-
-
-
 
 
 /* ==========================================================================
